@@ -70,9 +70,7 @@ contract SupplyChain {
 
   /* Add 2 modifiers to check if the item is sold already, and that the person calling this function
   is the seller. Change the state of the item to shipped. Remember to call the event associated with this function!*/
-  function shipItem(uint sku) sold(sku)  verifyCaller(items[sku].seller)  
-    public
-  {
+  function shipItem(uint sku) sold(sku)  verifyCaller(items[sku].seller)  public{
        items[sku].state = State.Shipped;
        emit Shipped(sku);
   }
